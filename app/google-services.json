@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "437094109681",
+    "project_id": "acpapp-ae612",
+    "storage_bucket": "acpapp-ae612.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437094109681:android:2c7ca5f9c3bc82ba5bb450",
+        "android_client_info": {
+          "package_name": "ma.ofppt.ocp_projet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATKQCaToQWNfLqRO-WLpK-AlR4vH74JxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

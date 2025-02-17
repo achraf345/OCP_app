@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ocpbackground"
+    tools:context=".MainActivity8_escpaceapprovisionement">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/t_500x300"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sty"
+        style="@style/costum_card_view_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:cardElevation="20dp">
+
+
+        <LinearLayout
+            android:layout_width="385dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:id="@+id/textreset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/escpace_approvisionement"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/matricule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:autofillHints=""
+                android:textColorHint="#898686"
+                android:maxLength="6"
+                android:backgroundTint="@color/greey"
+                android:hint="@string/rcar_matricule"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/FullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:autofillHints=""
+                android:textColorHint="#898686"
+                android:backgroundTint="@color/greey"
+                android:hint="@string/fullname"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:autofillHints=""
+                android:textColorHint="#898686"
+                android:backgroundTint="@color/greey"
+                android:hint="@string/phonenumberap"
+                android:inputType="phone"
+                android:textSize="20sp"
+                tools:ignore="TextFields" />
+
+            <Spinner
+                android:id="@+id/spinnerAp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:autofillHints=""
+                android:textColorHint="@drawable/back"
+                android:backgroundTint="@color/black"
+                android:inputType="textPassword"
+                android:textSize="30sp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColorHint="#898686"
+                android:backgroundTint="@color/greey"
+                android:hint="@string/passwordapp"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
+
+
+            <Button
+                android:id="@+id/Comfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/green"
+                android:letterSpacing="0.1"
+                android:padding="12dp"
+                android:text="@string/confirmer"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/backtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="@string/cancelapp"
+                android:textAlignment="center"
+                android:textColor="@color/green_2d"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud3"
+    tools:context=".MainActivity6_Change">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ronder_corner2"
+            android:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sty"
+        style="@style/costum_card_view_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:cardElevation="20dp"
+        android:elevation="20dp">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:paddingRight="25dp">
+
+                <TextView
+                    android:id="@+id/DemandPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/demand_de_changement"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/matricule2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:autofillHints=""
+                    android:textColorHint="#898686"
+                    android:backgroundTint="@color/greey"
+                    android:hint="@string/rcar_matricule"
+                    android:inputType="textPassword"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fullname2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:autofillHints=""
+                    android:textColorHint="#898686"
+                    android:backgroundTint="@color/greey"
+                    android:hint="@string/full_name"
+                    android:inputType="date"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/product2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="#898686"
+                    android:backgroundTint="@color/black"
+                    android:autofillHints="name"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:inputType="date"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/type2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textColorHint="#898686"
+                    android:backgroundTint="@color/black"
+                    android:autofillHints="name"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="#898686"
+                    android:backgroundTint="@color/greey"
+                    android:hint="Description"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/Changementphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="#898686"
+                    android:backgroundTint="@color/greey"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/TypeAgent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/black"
+                    android:backgroundTintMode="multiply"
+                    android:minHeight="48dp"
+                    android:autofillHints="name"
+                    android:scrollbarSize="6dp"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/Changement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/green"
+                    android:letterSpacing="0.1"
+                    android:padding="16dp"
+                    android:text="@string/changement"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/backtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/go_to_the_login_page"
+                    android:textAlignment="center"
+                    android:textColor="@color/green_2d"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

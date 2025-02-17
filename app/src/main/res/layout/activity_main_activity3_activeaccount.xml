@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/ocpbackground"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3_activeaccount">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:gravity="center"
+        android:text="@string/welcome_to_ocp_service"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/welcome"
+        style="@style/costum_card_view_style"
+        android:backgroundTint="@color/white"
+        android:background="@color/white"
+        app:cardElevation="4dp"
+        android:padding="30dp">
+
+
+
+        <TextView
+            android:id="@+id/textpartieactive"
+            android:layout_width="wrap_content"
+            android:background="@drawable/ronder_corner"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/green"
+            android:padding="12dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:layout_below="@id/welcome"
+            android:text="@string/please_complet_the_template_bellow_to_active_the_account_and_be_our_controler"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/Firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:hint="@string/first_name"
+            android:inputType="text"
+            android:textColorHint="#73797A"
+            android:backgroundTint="@color/greey"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:letterSpacing="0.1"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/LastName"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:hint="@string/last_name"
+            android:textColorHint="#73797A"
+            android:textStyle="normal"
+            android:layout_below="@id/Firstname"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:letterSpacing="0.1"
+            android:backgroundTint="@color/greey"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/Matricule"
+            android:backgroundTint="@color/greey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:inputType="number"
+            android:hint="@string/matricule"
+            android:textColorHint="#73797A"
+            android:textStyle="normal"
+            android:layout_below="@id/LastName"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:letterSpacing="0.1"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/Phonenumber"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:hint="@string/phone_number"
+            android:textColorHint="#73797A"
+            android:textStyle="normal"
+            android:layout_below="@id/Matricule"
+            android:backgroundTint="@color/greey"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:letterSpacing="0.1"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/Password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:hint="@string/password_active"
+            android:textColorHint="#73797A"
+            android:textStyle="normal"
+            android:layout_below="@id/Phonenumber"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:letterSpacing="0.1"
+            android:backgroundTint="@color/greey"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/ConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="370dp"
+            android:hint="@string/confirm_password"
+            android:textColorHint="#73797A"
+            android:backgroundTint="@color/greey"
+            android:textStyle="normal"
+            android:inputType="number"
+            android:layout_below="@id/Password2"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:letterSpacing="0.1"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            tools:ignore="TextFields" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ConfirmPassword"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="420dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="multiply"
+            android:minHeight="48dp"
+            android:scrollbarSize="6dp"
+            android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/Spinner"
+            android:layout_marginTop="475dp"
+            android:inputType="text"
+            android:padding="10dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/active_now"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            tools:ignore="TextViewEdits"/>
+
+        <TextView
+            android:id="@+id/Logintext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="535dp"
+            android:text="@string/log_in"
+            android:textColor="@color/green"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
