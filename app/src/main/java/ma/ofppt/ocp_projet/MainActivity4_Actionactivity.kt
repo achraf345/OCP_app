@@ -11,32 +11,27 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import ma.ofppt.ocp_projet.databinding.ActivityMainActivity6ChangeBinding
+import ma.ofppt.ocp_projet.databinding.ActivityMainActivity4ActionactivityBinding
 
 class MainActivity4_Actionactivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainActivity4ActionactivityBinding
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main_activity4_actionactivity)
-
-        val dementintet = findViewById<Button>(R.id.Demand2)
-        dementintet.setOnClickListener {
-            val intentd = Intent(this, MainActivity5_demand::class.java)
-            startActivity(intentd)
+        binding = ActivityMainActivity4ActionactivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.ACdemand?.setOnClickListener {
+            val intent = Intent(this, MainActivity5_demand::class.java)
+            startActivity(intent)
         }
-
-        val changeintent = findViewById<Button>(R.id.Changement2)
-        changeintent.setOnClickListener {
-            val intentc = Intent(this, MainActivity6_Change::class.java)
-            startActivity(intentc)
+        binding.ACchangement?.setOnClickListener {
+            val intent = Intent(this, MainActivity6_Change::class.java)
+            startActivity(intent)
         }
-
-        val logoutintent = findViewById<TextView>(R.id.Logout)
-        logoutintent.setOnClickListener {
-            val intentlogout = Intent(this, MainActivity::class.java)
-            startActivity(intentlogout)
+        binding.AClogout?.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 

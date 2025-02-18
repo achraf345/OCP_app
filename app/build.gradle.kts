@@ -34,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures {
+    buildFeatures{
         viewBinding = true
     }
 }
@@ -46,7 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth.ktx.v2103)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -57,7 +57,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/matricule"
+                android:id="@+id/EAPmatricule"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -70,7 +70,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/FullName"
+                android:id="@+id/EAPfullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -82,7 +82,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/Number"
+                android:id="@+id/EAPnumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -95,7 +95,7 @@
                 tools:ignore="TextFields" />
 
             <Spinner
-                android:id="@+id/spinnerAp"
+                android:id="@+id/EAPspinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -110,7 +110,7 @@
 
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/EAPpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -122,7 +122,7 @@
 
 
             <Button
-                android:id="@+id/Comfirm"
+                android:id="@+id/EAPcomfirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -136,7 +136,7 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/backtext"
+                android:id="@+id/EAPbacktext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

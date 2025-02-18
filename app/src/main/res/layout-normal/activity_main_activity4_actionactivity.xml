@@ -109,7 +109,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/Demand2"
+                    android:id="@+id/ACdemand"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
@@ -129,7 +129,7 @@
                     tools:ignore="MissingConstraints" />
 
                 <Button
-                    android:id="@+id/Changement2"
+                    android:id="@+id/ACchangement"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="15dp"
@@ -149,7 +149,7 @@
                     tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/Logout"
+                    android:id="@+id/AClogout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"

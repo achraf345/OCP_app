@@ -14,7 +14,7 @@
         tools:ignore="MissingConstraints">
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/Dback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/back"
@@ -58,7 +58,7 @@
                     android:layout_marginTop="10dp"/>
 
                 <EditText
-                    android:id="@+id/matricule"
+                    android:id="@+id/Dmatricule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -70,7 +70,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/fullname"
+                    android:id="@+id/Dfullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -81,7 +81,7 @@
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/Sproduct"
+                    android:id="@+id/Dproduct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -94,7 +94,7 @@
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/Stype"
+                    android:id="@+id/Dtype"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -106,7 +106,7 @@
                     android:paddingBottom="15dp"/>
 
                 <EditText
-                    android:id="@+id/demandphone"
+                    android:id="@+id/Dphonenumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -118,7 +118,7 @@
                     tools:ignore="TextFields" />
 
                 <Spinner
-                    android:id="@+id/STypeAgent"
+                    android:id="@+id/DtypeAgent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -131,7 +131,7 @@
                     android:textAlignment="textStart" />
 
                 <Button
-                    android:id="@+id/Demande"
+                    android:id="@+id/Ddemande"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -146,7 +146,7 @@
                     android:textSize="25sp" />
 
                 <TextView
-                    android:id="@+id/backtext"
+                    android:id="@+id/Dbacktext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

@@ -12,13 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ocp_projet"
         tools:targetApi="31">
-        <activity android:name=".MainActivity2_resetpassword" android:exported="true" />
-        <activity android:name=".MainActivity3_activeaccount" android:exported="true"/>
-        <activity android:name=".MainActivity4_Actionactivity" android:exported="true"/>
-        <activity android:name=".MainActivity5_demand" android:exported="true" />
-        <activity android:name=".MainActivity6_Change" android:exported="true" />
-        <activity android:name=".MainActivity7_escepaceadministrateur" android:exported="true" />
-        <activity android:name=".MainActivity8_escpaceapprovisionement" android:exported="true" />
+        <activity android:name=".MainActivity2_resetpassword"
+            android:exported="true" />
+        <activity android:name=".MainActivity3_activeaccount"
+            android:exported="true"/>
+        <activity android:name=".MainActivity4_Actionactivity"
+            android:exported="true"/>
+        <activity android:name=".MainActivity5_demand"
+            android:exported="true" />
+        <activity android:name=".MainActivity6_Change"
+            android:exported="true" />
+        <activity android:name=".MainActivity7_escepaceadministrateur"
+            android:exported="true" />
+        <activity android:name=".MainActivity8_escpaceapprovisionement"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

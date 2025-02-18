@@ -12,47 +12,30 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import ma.ofppt.ocp_projet.databinding.ActivityMainActivity3ActiveaccountBinding
+import ma.ofppt.ocp_projet.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainActivity3ActiveaccountBinding
-    private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var reset : TextView
-    private lateinit var Login : Button
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var authuser : FirebaseAuth
+
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainActivity3ActiveaccountBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        firebaseAuth = FirebaseAuth.getInstance()
-        reset = findViewById(R.id.Reset)
-        reset.setOnClickListener{
-            val intentReset = Intent(this,MainActivity2_resetpassword::class.java)
-            startActivity(intentReset)
-        }
+        authuser = FirebaseAuth.getInstance()
+        binding.Ulogin?.setOnClickListener {
+            val matricule = binding.Umatricule?.text.toString()
+            val password2 = binding.Upassword?.text.toString()
 
-        Login = findViewById(R.id.Login)
-        Login.setOnClickListener{
-            val intentlogin = Intent(this,MainActivity4_Actionactivity::class.java)
-            startActivity(intentlogin)
-        }
-
-
-        binding.active.setOnClickListener {
-            val activeintent = Intent(this, MainActivity3_activeaccount::class.java)
-            startActivity(activeintent)
-        }
-
-        Login.setOnClickListener {
-            val matricule = binding.Matricule.text.toString()
-            val password2 = binding.Password2.text.toString()
-
-            if (matricule.isEmpty() && password2.isEmpty()) {
-                firebaseAuth.signInWithEmailAndPassword(matricule, password2).addOnCompleteListener {
+            if (matricule.isNotEmpty() && password2.isNotEmpty()) {
+                authuser.signInWithEmailAndPassword(matricule, password2).addOnCompleteListener {
                     if (it.isSuccessful) {
                         val intent = Intent(this, MainActivity4_Actionactivity::class.java)
                         startActivity(intent)
@@ -65,16 +48,31 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             }
 
-            val escpacead = findViewById<TextView>(R.id.ecspaceadministrateur)
-            escpacead.setOnClickListener {
+
+            binding.Uecspaceadministrateur?.setOnClickListener {
                 val escpacead = Intent(this, MainActivity7_escepaceadministrateur::class.java)
                 startActivity(escpacead)
             }
 
-            val escpaceap = findViewById<TextView>(R.id.escpaceApprovissionement)
-            escpaceap.setOnClickListener {
+            binding.UescpaceApprovissionement?.setOnClickListener {
                 val escpaceap = Intent(this, MainActivity8_escpaceapprovisionement::class.java)
                 startActivity(escpaceap)
+            }
+
+            binding.Ulogin!!.setOnClickListener{
+                val intentlogin = Intent(this,MainActivity4_Actionactivity::class.java)
+                startActivity(intentlogin)
+            }
+
+
+            binding.Uactive?.setOnClickListener {
+                val activeintent = Intent(this, MainActivity3_activeaccount::class.java)
+                startActivity(activeintent)
+            }
+
+            binding.Uresetpassword?.setOnClickListener {
+                val resetintent = Intent(this, MainActivity2_resetpassword::class.java)
+                startActivity(resetintent)
             }
         }
     }

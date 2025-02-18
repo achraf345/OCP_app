@@ -56,4 +56,5 @@
     <string name="adpassword">Password</string>
     <string name="cancelapp">Cancel</string>
     <string name="log_in">Log In</string>
+    <string name="Cphonenumber">Phone Number</string>
 </resources>

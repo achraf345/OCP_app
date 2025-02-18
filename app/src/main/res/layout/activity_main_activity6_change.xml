@@ -14,7 +14,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/back"
+            android:id="@+id/Cback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back"
@@ -57,7 +57,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/matricule2"
+                    android:id="@+id/Cmatricule2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -69,7 +69,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/fullname2"
+                    android:id="@+id/Cfullname2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -81,7 +81,7 @@
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/product2"
+                    android:id="@+id/Cproduct2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -94,7 +94,7 @@
                     android:textSize="20sp" />
 
                 <Spinner
-                    android:id="@+id/type2"
+                    android:id="@+id/Ctype2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -106,7 +106,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/Description"
+                    android:id="@+id/Cdescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -117,18 +117,19 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/Changementphone"
+                    android:id="@+id/Cchangementphone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:textColorHint="#898686"
                     android:backgroundTint="@color/greey"
-                    android:hint="Phone Number"
+                    android:hint="@string/Cphonenumber"
                     android:inputType="number"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="TextFields" />
 
                 <Spinner
-                    android:id="@+id/TypeAgent2"
+                    android:id="@+id/Ctypeagent2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -140,7 +141,7 @@
                     android:textAlignment="textStart" />
 
                 <Button
-                    android:id="@+id/Changement"
+                    android:id="@+id/Cchange"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
@@ -154,7 +155,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/backtext"
+                    android:id="@+id/Cbacktext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
