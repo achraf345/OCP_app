@@ -8,6 +8,7 @@ firebaseAuthKtx = "22.1.2"
 firebaseAuthKtxVersion = "latest_version"
 firebaseBom = "33.9.0"
 firebaseBomVersion = "32.7.1"
+googleFirebaseAuth = "22.3.1"
 googleFirebaseAuthKtx = "21.0.3"
 googleServices = "4.4.2"
 kotlin = "1.9.24"
@@ -40,6 +41,7 @@ firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx"
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
 firebase-auth-ktx-v2103 = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "googleFirebaseAuthKtx" }
 firebase-auth-ktx-v2212 = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
+firebase-auth-v2231 = { module = "com.google.firebase:firebase-auth", version.ref = "googleFirebaseAuth" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-bom-v3271 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
 firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }

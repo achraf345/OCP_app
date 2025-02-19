@@ -65,7 +65,7 @@
             android:hint="@string/first_name"
             android:inputType="text"
             android:textColorHint="#73797A"
-            android:backgroundTint="@color/greey"
+            android:backgroundTint="@color/black"
             android:textStyle="normal"
             android:textSize="20sp"
             android:textAlignment="center"
@@ -87,17 +87,17 @@
             android:textSize="20sp"
             android:textAlignment="center"
             android:letterSpacing="0.1"
-            android:backgroundTint="@color/greey"
+            android:backgroundTint="@color/black"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"/>
 
         <EditText
             android:id="@+id/Amatricule"
-            android:backgroundTint="@color/greey"
+            android:backgroundTint="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="220dp"
-            android:inputType="number"
+            android:inputType="text"
             android:hint="@string/matricule"
             android:textColorHint="#73797A"
             android:textStyle="normal"
@@ -118,7 +118,7 @@
             android:textColorHint="#73797A"
             android:textStyle="normal"
             android:layout_below="@id/Amatricule"
-            android:backgroundTint="@color/greey"
+            android:backgroundTint="@color/black"
             android:textSize="20sp"
             android:textAlignment="center"
             android:letterSpacing="0.1"
@@ -138,9 +138,10 @@
             android:inputType="number"
             android:textAlignment="center"
             android:letterSpacing="0.1"
-            android:backgroundTint="@color/greey"
+            android:backgroundTint="@color/black"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            tools:ignore="TextFields" />
 
         <EditText
             android:id="@+id/Aconfirmpassword"
@@ -149,9 +150,9 @@
             android:layout_marginTop="370dp"
             android:hint="@string/confirm_password"
             android:textColorHint="#73797A"
-            android:backgroundTint="@color/greey"
+            android:backgroundTint="@color/black"
             android:textStyle="normal"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:layout_below="@id/Apassword"
             android:textSize="20sp"
             android:textAlignment="center"

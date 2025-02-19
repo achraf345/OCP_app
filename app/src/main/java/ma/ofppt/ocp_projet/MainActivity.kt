@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         authuser = FirebaseAuth.getInstance()
+        binding.Uresetpassword?.setOnClickListener {
+            val resetintent = Intent(this, MainActivity2_resetpassword::class.java)
+            startActivity(resetintent)
+        }
         binding.Ulogin?.setOnClickListener {
             val matricule = binding.Umatricule?.text.toString()
             val password2 = binding.Upassword?.text.toString()
@@ -48,17 +52,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             }
 
-
-            binding.Uecspaceadministrateur?.setOnClickListener {
-                val escpacead = Intent(this, MainActivity7_escepaceadministrateur::class.java)
-                startActivity(escpacead)
-            }
-
-            binding.UescpaceApprovissionement?.setOnClickListener {
-                val escpaceap = Intent(this, MainActivity8_escpaceapprovisionement::class.java)
-                startActivity(escpaceap)
-            }
-
             binding.Ulogin!!.setOnClickListener{
                 val intentlogin = Intent(this,MainActivity4_Actionactivity::class.java)
                 startActivity(intentlogin)
@@ -70,9 +63,14 @@ class MainActivity : AppCompatActivity() {
                 startActivity(activeintent)
             }
 
-            binding.Uresetpassword?.setOnClickListener {
-                val resetintent = Intent(this, MainActivity2_resetpassword::class.java)
-                startActivity(resetintent)
+            binding.Uecspaceadministrateur?.setOnClickListener {
+                val escpacead = Intent(this, MainActivity7_escepaceadministrateur::class.java)
+                startActivity(escpacead)
+            }
+
+            binding.UescpaceApprovissionement?.setOnClickListener {
+                val escpaceap = Intent(this, MainActivity8_escpaceapprovisionement::class.java)
+                startActivity(escpaceap)
             }
         }
     }

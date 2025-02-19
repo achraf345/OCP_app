@@ -3,6 +3,8 @@ package ma.ofppt.ocp_projet
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -28,6 +30,21 @@ class MainActivity3_activeaccount : AppCompatActivity() {
         binding.Alogintext.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+        val items = listOf("Select an option : ", "KH Ville", "Mrah", "Bni Amir", "Mlikat", "Point B", "Point A", "Sidi Chenane", "COZ")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items)
+        binding.Aspinner.adapter = adapter
+        binding.Aspinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedItem = items[position]
+                if (position != 0) {
+                    Toast.makeText(this@MainActivity3_activeaccount, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(this@MainActivity3_activeaccount, "Nothing selected", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.Aactive.setOnClickListener {
