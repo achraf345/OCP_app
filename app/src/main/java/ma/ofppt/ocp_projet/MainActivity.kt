@@ -1,5 +1,6 @@
 package ma.ofppt.ocp_projet
 
+import DatabaseHelper
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +17,7 @@ import ma.ofppt.ocp_projet.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var authuser : FirebaseAuth
+    private lateinit var databaseHelper: DatabaseHelper
 
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        authuser = FirebaseAuth.getInstance()
+        databaseHelper = DatabaseHelper(this)
+
         binding.Uresetpassword?.setOnClickListener {
             val resetintent = Intent(this, MainActivity2_resetpassword::class.java)
             startActivity(resetintent)
@@ -39,39 +41,43 @@ class MainActivity : AppCompatActivity() {
             val password2 = binding.Upassword?.text.toString()
 
             if (matricule.isNotEmpty() && password2.isNotEmpty()) {
-                authuser.signInWithEmailAndPassword(matricule, password2).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity4_Actionactivity::class.java)
-                        startActivity(intent)
-                    }
-                    else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-                    }
-                }
+                LoginUser(
+                    matricule, password2,
+                    matricule = TODO(),
+                    phonenumber = TODO(),
+                    password = TODO(),
+                    cpassword = TODO()
+                )
             }else{
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             }
-
             binding.Ulogin!!.setOnClickListener{
                 val intentlogin = Intent(this,MainActivity4_Actionactivity::class.java)
                 startActivity(intentlogin)
             }
-
-
             binding.Uactive?.setOnClickListener {
                 val activeintent = Intent(this, MainActivity3_activeaccount::class.java)
                 startActivity(activeintent)
             }
-
             binding.Uecspaceadministrateur?.setOnClickListener {
                 val escpacead = Intent(this, MainActivity7_escepaceadministrateur::class.java)
                 startActivity(escpacead)
             }
-
             binding.UescpaceApprovissionement?.setOnClickListener {
                 val escpaceap = Intent(this, MainActivity8_escpaceapprovisionement::class.java)
                 startActivity(escpaceap)
             }
+        }
+    }
+    private fun LoginUser(firstname: String, lastname: String, matricule: String, phonenumber: String, password: String, cpassword: String){
+        val userExist = databaseHelper.ReadUser(firstname, lastname, matricule, phonenumber, password, cpassword)
+        if (userExist){
+            Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this , MainActivity4_Actionactivity::class.java)
+            startActivity(intent)
+            finish()
+        }else{
+            Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
         }
     }
 }
