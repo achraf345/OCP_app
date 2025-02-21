@@ -57,4 +57,9 @@
     <string name="cancelapp">Cancel</string>
     <string name="log_in">Log In</string>
     <string name="Cphonenumber">Phone Number</string>
+    <string name="Tconfirm">CONFIRM</string>
+    <string name="Tannuler">ANNULER</string>
+    <string name="livraison_phase">Livraison Phase,</string>
+    <string name="validation_phase">Validation Phase,</string>
+    <string name="description">Description</string>
 </resources>

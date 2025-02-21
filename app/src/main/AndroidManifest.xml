@@ -12,25 +12,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ocp_projet"
         tools:targetApi="31">
-        <activity android:name=".MainActivity2_resetpassword"
+        <activity
+            android:name=".MainActivity4_Actionactivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity10_Livraison"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity9_Ticket"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityTicket"
+            android:exported="false" />
+        <activity
+            android:name=".TicketMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity9_ADMINSTicket"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2_resetpassword"
             android:exported="true" />
-        <activity android:name=".MainActivity3_activeaccount"
-            android:exported="true"/>
-        <activity android:name=".MainActivity4_Actionactivity"
-            android:exported="true"/>
-        <activity android:name=".MainActivity5_demand"
+        <activity
+            android:name=".MainActivity3_activeaccount"
             android:exported="true" />
-        <activity android:name=".MainActivity6_Change"
+        <activity
+            android:name=".MainActivity5_demand"
             android:exported="true" />
-        <activity android:name=".MainActivity7_escepaceadministrateur"
+        <activity
+            android:name=".MainActivity6_Change"
             android:exported="true" />
-        <activity android:name=".MainActivity8_escpaceapprovisionement"
+        <activity
+            android:name=".MainActivity7_escepaceadministrateur"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity8_escpaceapprovisionement"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

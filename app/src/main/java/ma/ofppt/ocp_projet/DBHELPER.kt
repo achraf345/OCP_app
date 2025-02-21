@@ -8,7 +8,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
     companion object {
         private const val DATABASE_NAME = "user_database.db"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_VERSION = 2
         private const val TABLE_USERS = "users"
         private const val COLUMN_ID = "id"
         private const val COLUMN_FIRSTNAME = "firstname"
@@ -17,6 +17,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val COLUMN_PHONENUMBER = "phonenumber"
         private const val COLUMN_PASSWORD = "password"
         private const val COLUMN_CPASSWORD = "cpassword"
+        private const val COLUMN_LOCATION = "location"
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -27,7 +28,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 "$COLUMN_MATRICULE TEXT NOT NULL, " +
                 "$COLUMN_PHONENUMBER TEXT NOT NULL, " +
                 "$COLUMN_PASSWORD TEXT NOT NULL, " +
-                "$COLUMN_CPASSWORD TEXT NOT NULL)"
+                "$COLUMN_CPASSWORD TEXT NOT NULL, " +
+                "$COLUMN_LOCATION TEXT NOT NULL)"
         db.execSQL(createTableQuery)
     }
 
@@ -36,7 +38,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         onCreate(db)
     }
 
-    fun addUser(firstname: String, lastname: String, matricule: String, phonenumber: String, password: String, cpassword: String): Long {
+    fun addUser(firstname: String, lastname: String, matricule: String, phonenumber: String, password: String, cpassword: String, location: String): Long {
         val db = this.writableDatabase
         val contentValues = ContentValues().apply {
             put(COLUMN_FIRSTNAME, firstname)
@@ -45,20 +47,44 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             put(COLUMN_PHONENUMBER, phonenumber)
             put(COLUMN_PASSWORD, password)
             put(COLUMN_CPASSWORD, cpassword)
+            put(COLUMN_LOCATION, location)  // Save spinner selection
         }
+
         val result = db.insert(TABLE_USERS, null, contentValues)
         db.close()
+
+        if (result == -1L) {
+            println("Database Insertion Failed")
+        } else {
+            println("User Inserted Successfully with ID: $result")
+        }
+
         return result
     }
-
-    fun ReadUser(firstname: String, lastname: String, matricule: String, phonenumber: String, password: String, cpassword: String): Boolean {
+    fun readUser(matricule: String, password: String): Boolean {
         val db = readableDatabase
-        val selection = "$COLUMN_FIRSTNAME = ? AND $COLUMN_LASTNAME = ? AND $COLUMN_MATRICULE = ? AND $COLUMN_PHONENUMBER = ? AND $COLUMN_PASSWORD = ? AND $COLUMN_CPASSWORD = ?"
-        val selectionArgs = arrayOf(firstname, lastname, matricule, phonenumber, password, cpassword)
+        val selection = "$COLUMN_MATRICULE = ? AND $COLUMN_PASSWORD = ?"
+        val selectionArgs = arrayOf(matricule, password)
         val cursor = db.query(TABLE_USERS, null, selection, selectionArgs, null, null, null)
 
         val userExists = cursor.count > 0
         cursor.close()
         return userExists
     }
+    fun updatePassword(matricule: String, newPassword: String): Boolean {
+        val db = this.writableDatabase
+        val contentValues = ContentValues().apply {
+            put(COLUMN_PASSWORD, newPassword)
+            put(COLUMN_CPASSWORD, newPassword)  // Update confirm password too
+        }
+
+        val whereClause = "$COLUMN_MATRICULE = ?"
+        val whereArgs = arrayOf(matricule)
+
+        val rowsAffected = db.update(TABLE_USERS, contentValues, whereClause, whereArgs)
+        db.close()
+
+        return rowsAffected > 0
+    }
 }
+

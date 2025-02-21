@@ -43,7 +43,7 @@
             android:paddingLeft="25dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingTop="15dp"
+            android:paddingTop="5dp"
             android:paddingRight="25dp">
 
             <TextView
@@ -60,24 +60,25 @@
                 android:id="@+id/EADmatricule"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:autofillHints=""
+                android:maxLength="7"
                 android:textColorHint="#898686"
                 android:backgroundTint="@color/greey"
                 android:hint="@string/rcar_matricule"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/EADfullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:autofillHints=""
-                android:textColorHint="#898686"
+                android:textColorHint="#858282"
                 android:backgroundTint="@color/greey"
                 android:hint="@string/full_nameadd"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:textSize="20sp" />
 
             <Spinner
