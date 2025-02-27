@@ -97,8 +97,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ocp3"
-                    android:elevation="300dp"/>
+                    android:src="@drawable/ocp6"
+                    android:elevation="700dp"/>
 
             </LinearLayout>
 

@@ -34,12 +34,10 @@ class DBDEMAND(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         """.trimIndent()
         db.execSQL(createTableQuery)
     }
-
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_DEMANDS")
         onCreate(db)
     }
-
     fun insertDemand(matricule: String, fullname: String, product: String, type: String, phone: String, agentType: String): Boolean {
         val db = this.writableDatabase
         val values = ContentValues().apply {
@@ -54,4 +52,20 @@ class DBDEMAND(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         db.close()
         return result != -1L
     }
+    fun getLastDemand(): Demand? {
+        val db = this.readableDatabase
+        val query = "SELECT * FROM $TABLE_DEMANDS ORDER BY $COLUMN_ID DESC LIMIT 1"
+        val cursor = db.rawQuery(query, null)
+        var demand: Demand? = null
+        if (cursor.moveToFirst()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+            val product = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PRODUCT))
+            val agentType = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_AGENT_TYPE))
+            demand = Demand(id, product, agentType)
+        }
+        cursor.close()
+        db.close()
+        return demand
+    }
+
 }

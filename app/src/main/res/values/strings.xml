@@ -40,7 +40,7 @@
     <string name="demand_de_changement">Change Demand,</string>
     <string name="ocp_d">OCP Maroc stands for Office Chérifien des Phosphates in French. In English, it translates to Cherifian Phosphate Office.</string>
     <string name="text">you can order and change from this </string>
-    <string name="textc">application the all the type of device</string>
+    <string name="textc">application all the type of product</string>
     <string name="welcome">Welcome,</string>
     <string name="close_the_page">Log out</string>
     <string name="fullname">Full Name</string>
@@ -62,4 +62,7 @@
     <string name="livraison_phase">Livraison Phase,</string>
     <string name="validation_phase">Validation Phase,</string>
     <string name="description">Description</string>
+    <string name="id_ticket">ID_Ticket</string>
+    <string name="producttype">ProductType</string>
+    <string name="type_agent">Type Agent</string>
 </resources>

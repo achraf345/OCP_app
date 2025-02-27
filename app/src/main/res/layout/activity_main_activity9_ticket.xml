@@ -8,12 +8,103 @@
     tools:context=".MainActivity9_Ticket"
     android:background="@drawable/ocpbackground">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        android:background="@color/white"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/validation_phase"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:letterSpacing="0.05"
+        tools:ignore="MissingConstraints" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ronder_corner"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/Valider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valider"
+                android:layout_gravity="end"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:backgroundTint="@color/white"
+                android:layout_marginEnd="40dp"/>
+
+            <Button
+                android:id="@+id/Annuler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Tannuler"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/IDTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID_Ticket"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/ProductType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ProductType"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/Typeagent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type Agent"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic" />
+
+
+    </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

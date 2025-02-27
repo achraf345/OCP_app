@@ -22,11 +22,11 @@ class MainActivity5_demand : AppCompatActivity() {
         val adapterProduct = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, products)
         binding.Dproduct.adapter = adapterProduct
 
-        val types = listOf("Select Type", "PC Dell fix", "PC Dell Laptop", "Imprimante", "Samsung A54", "Samsung S24", "Iphone 16 Pro", "Iphone 16 Pro Max")
+        val types = listOf("Select Type", "PC Dell fix", "PC Dell Laptop", "Imprimante", "Samsung A34", "Samsung A54", "Samsung S24", "Iphone 16 Pro", "Iphone 16 Pro Max")
         val adapterType = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, types)
         binding.Dtype.adapter = adapterType
 
-        val agentTypes = listOf("Select Agent Type", "Tamka", "Orcadre", "Dericteur", "VIP", "VIP+")
+        val agentTypes = listOf("Select Agent Type", "Tamka", "Hors cadre", "Directeur", "VIP", "VIP+")
         val adapterAgentType = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, agentTypes)
         binding.DtypeAgent.adapter = adapterAgentType
 

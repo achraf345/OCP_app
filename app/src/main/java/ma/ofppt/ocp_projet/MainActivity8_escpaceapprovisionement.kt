@@ -54,9 +54,8 @@ class MainActivity8_escpaceapprovisionement : AppCompatActivity() {
                 Toast.makeText(this, "Failed to Create Account", Toast.LENGTH_SHORT).show()
             }
         }
-
         binding.EAPbacktext.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java)) // Redirect to main screen
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }

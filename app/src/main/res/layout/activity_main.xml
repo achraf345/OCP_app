@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".MainActivity"
-    android:background="@drawable/backgroundgreen">
+    android:background="@drawable/backgroundgreen"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/ocp_image"
@@ -15,7 +14,9 @@
         android:layout_height="170dp"
         android:src="@drawable/th"
         android:foregroundGravity="center"
-        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp" />
 
     <TextView
@@ -23,154 +24,129 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/escpace_user"
-        android:layout_below="@id/ocp_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="8dp"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:paddingRight="8dp"
-        android:paddingLeft="8dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"/>
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/ocp_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
 
     <LinearLayout
         android:id="@+id/LL"
-        android:layout_below="@+id/ocp_image"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="55dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:elevation="20sp"
-        android:paddingBottom="6dp"
-        android:backgroundTint="#EFEDED"
-        android:background="@drawable/ronder_corner">
-
-
+        android:background="@drawable/ronder_corner"
+        android:backgroundTint="#EDEDED"
+        android:paddingBottom="1dp"
+        app:layout_constraintTop_toBottomOf="@id/escpaceuser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="40dp">
 
         <EditText
             android:id="@+id/Umatricule"
-            android:autofillHints=""
-            android:textColorHint="#898686"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:shadowColor="@color/black"
-            android:layout_marginRight="20dp"
+            android:hint="@string/rcar_matricule"
             android:padding="15dp"
             android:maxLength="7"
-            android:hint="@string/rcar_matricule"
             android:background="@drawable/ronder_corner"
             android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:textStyle="normal"
             android:textSize="20sp"
-            android:shadowRadius="@integer/material_motion_duration_medium_1"/>
+            android:textColor="@color/black"
+            android:textColorHint="#898686"
+            android:layout_margin="20dp" />
 
         <EditText
             android:id="@+id/Upassword"
-            android:textColorHint="#898686"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:shadowColor="@color/black"
+            android:hint="@string/password"
             android:padding="15dp"
             android:inputType="textPassword"
-            android:hint="@string/password"
-            android:textStyle="normal"
             android:background="@drawable/ronder_corner"
-            android:backgroundTint="@color/white"
+            android:textSize="20sp"
             android:textColor="@color/black"
-            android:shadowRadius="@integer/material_motion_duration_medium_1"
-            android:textSize="20sp"/>
+            android:backgroundTint="@color/white"
+            android:textColorHint="#898686"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="1dp" />
 
         <TextView
             android:id="@+id/Uresetpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
             android:text="@string/reset_password"
             android:textSize="17sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textColorLink="@color/white" />
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp" />
 
         <Button
             android:id="@+id/Ulogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:elevation="30dp"
-            android:layout_marginBottom="20dp"
             android:text="@string/login"
             android:textSize="24sp"
             android:textStyle="bold"
             android:backgroundTint="#57D131"
             android:textColor="@color/white"
-            android:textColorHint="@color/green"
-            android:textColorLink="@color/white" />
-
+            android:layout_margin="20dp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/Uactive"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/LL"
-        android:layout_marginTop="12dp"
-        android:layout_marginRight="60dp"
-        android:backgroundTint="#57D131"
-        android:layout_marginLeft="60dp"
-        android:elevation="40dp"
         android:text="@string/active_your_account"
         android:textSize="22sp"
         android:padding="10dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"/>
+        android:backgroundTint="#57D131"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/LL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="60dp" />
 
     <TextView
         android:id="@+id/Uecspaceadministrateur"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:text="@string/escpace_administrateurad"
-        android:layout_below="@id/Uactive"
         android:textSize="20sp"
+        android:textStyle="bold"
         android:background="@drawable/ronder_corner2"
+        android:textColor="@color/green_2d"
         android:backgroundTint="@color/white"
         android:textAlignment="center"
-        android:textColor="@color/green_2d"
+        app:layout_constraintTop_toBottomOf="@id/Uactive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:padding="10dp"/>
+        android:layout_marginHorizontal="60dp"
+        android:padding="10dp" />
 
     <TextView
         android:id="@+id/UescpaceApprovissionement"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:text="@string/escpace_approvisionementap"
-        android:layout_below="@id/Uecspaceadministrateur"
         android:textSize="20sp"
-        android:textAlignment="center"
+        android:textStyle="bold"
         android:background="@drawable/ronder_corner2"
-        android:backgroundTint="@color/white"
         android:textColor="@color/green_2d"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/Uecspaceadministrateur"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:padding="10dp"/>
-
-
-
-</RelativeLayout>
+        android:layout_marginHorizontal="60dp"
+        android:padding="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

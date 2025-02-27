@@ -75,7 +75,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val db = this.writableDatabase
         val contentValues = ContentValues().apply {
             put(COLUMN_PASSWORD, newPassword)
-            put(COLUMN_CPASSWORD, newPassword)  // Update confirm password too
+            put(COLUMN_CPASSWORD, newPassword)
         }
 
         val whereClause = "$COLUMN_MATRICULE = ?"
